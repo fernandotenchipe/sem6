@@ -226,7 +226,22 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <app-boton (onClick)="suma()" [color]='"yellow"' [texto]='"suma"'></app-boton>
+      <br/>
+      <app-boton (onClick)="resta()" [texto]='"resta"'></app-boton>
+      <br/>
+      {{ money }}
+      @if (money > 17) {
+        <p>eres mayor de eddad</p>
+      }@else {
+        <p>eres menor de eddad</p>
+      }
+      <ul>
+        @for(letra of title; track letra) {
+          <li>{{letra}}</li>
+        }
+      </ul>
+      <input type="text" [(ngModel)]="title"/>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
