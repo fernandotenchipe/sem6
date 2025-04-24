@@ -11,12 +11,4 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pedro';
-  money = 0
-  suma() {
-    this.money++;
-  }
-  resta() {
-    this.money--;
-  }
 }

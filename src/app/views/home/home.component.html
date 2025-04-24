@@ -1,0 +1,19 @@
+<p>home works!</p>
+<h1>Hello, {{ title }}</h1>
+<app-boton (onClick)="suma()" [color]='"yellow"' [texto]='"suma"' (edad)="getEdad($event)" ></app-boton>
+<br/>
+<app-boton (onClick)="resta()" [texto]='"resta"' (edad)="getEdad($event)" ></app-boton>
+<br/>
+{{ money }}
+@if (money > 17) {
+  <p>eres mayor de eddad</p>
+}@else {
+  <p>eres menor de eddad</p>
+}
+<ul>
+  @for(letra of title; track letra) {
+    <li>{{letra}}</li>
+  }
+</ul>
+<input type="text" [(ngModel)]="title"/>
+<div class="divider" role="separator" aria-label="Divider"></div>
